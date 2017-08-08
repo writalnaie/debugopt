@@ -10,7 +10,7 @@ The main driver for compiling source code (in C/C++)
 The debugger driver for debugging program compiled by debugopt-clang
 
 ```diff
-- The debugopt binary for x86-64 is available in `debugopt.tar.gz`
+- The debugopt binary for x86-64 is available in "debugopt.tar.gz"
 ```
 
 ## Usage
