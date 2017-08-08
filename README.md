@@ -42,8 +42,6 @@ We provide an example usage in the test folder. The content of main.c is the fol
 ```
 $ cd test
 $ cat -n main.c
-```
-```c
  1	int printf(const char *fmt, ...);
  2	
  3	void foo(int n, int m) {
