@@ -4,10 +4,8 @@
 
 Debugopt is a tool for debugging optimized binary code by switching to the unoptimized version. Debugopt is consisted of the following components:
 
-+ debugopt-clang
-The main driver for compiling source code (in C/C++)
-+ debugopt-gdb
-The debugger driver for debugging program compiled by debugopt-clang
++ `debugopt-clang`: the main driver for compiling source code (in C/C++)
++ `debugopt-gdb`: the debugger driver for debugging program compiled by debugopt-clang
 
 ```diff
 - The debugopt binary for x86-64 is available in "debugopt.tar.gz"
