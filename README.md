@@ -9,28 +9,30 @@ The main driver for compiling source code (in C/C++)
 + debugopt-gdb
 The debugger driver for debugging program compiled by debugopt-clang
 
-<span style="color:red;">The debugopt binary for x86-64 is available in `debugopt.tar.gz`</span>
+```diff
+- The debugopt binary for x86-64 is available in `debugopt.tar.gz`
+```
 
 ## Usage
 
 ### debugopt-clang
 debugopt-clang works exactly the same with standard clang. When the program is compiled with both option -O2/-O3 and -g, debugopt-clang automatically generate the unoptimized functions. debugopt-clang also provides two extra option:
 
-Command | Explanation
---- | ---
---savetemp | Saves all the temporal generated files. Normally those temporal generated files are automatically removed after the compiling.
---separation | When the unoptimized functions are linked into a separated shared library.
+| Command      | Explanation |
+| ------------ | --- |
+| --savetemp   | Saves all the temporal generated files. Normally those temporal generated files are automatically removed after the compiling. |
+| --separation | When the unoptimized functions are linked into a separated shared library. |
 
 ### debugopt-gdb
 
 debugopt-gdb works exactly the same with standard gdb. debugopt-gdb supports several extra commands:
 
-Command | Explanation
---- | ---
--b/-tb/-hb/-thb/-rb	| The extra commands supported by debugopt-gdb. They have the same syntax and semantic with the intrinsic b/tb/hb/thb/rb commands. But they are used to insert debugopt breakpoints that locate in the unoptimized functions.
--d | The extra commands supported by debugopt-gdb. It has the same syntax and semantic with the intrinsic d commands. But it is for deleting debugopt breakpoints.
--di/-en	| Disable/enable debugopt breakpoints. They have the same synax with the intrinsic gdb command disable/enable.
--s/-n | The debugopt single stepping/next command for stepping into/stepping over a function with unoptimized code.
+| Command             | Explanation
+| ------------------- | ---
+| -b/-tb/-hb/-thb/-rb | The extra commands supported by debugopt-gdb. They have the same syntax and semantic with the intrinsic b/tb/hb/thb/rb commands. But they are used to insert debugopt breakpoints that locate in the unoptimized functions.
+| -d                  | The extra commands supported by debugopt-gdb. It has the same syntax and semantic with the intrinsic d commands. But it is for deleting debugopt breakpoints.
+| -di/-en	          | Disable/enable debugopt breakpoints. They have the same synax with the intrinsic gdb command disable/enable.
+| -s/-n               | The debugopt single stepping/next command for stepping into/stepping over a function with unoptimized code.
 
 ## Example
 
